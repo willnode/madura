@@ -1,10 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-size: 1.2em;
 	font-family: sans-serif;
-	box-sizing: border-box;
 	background: linear-gradient(whitesmoke, white) no-repeat;
+	position: relative;
 }
-
 
 h1 {
 	text-align: center;
@@ -24,6 +27,6 @@ h1 {
 .foot {
 	font-size: 0.8em;
 	color: gray;
-	position: absolute;
-	bottom: 10px;
+	margin-top: 3em;
+	background-color: white;
 }
