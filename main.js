@@ -26,6 +26,14 @@ $('#input,input[name=mode]').on('input', function() {
 	if (t.length < 2) {
 		$('#highlight').html('');
 		$('#result').html('');
+	} else if (t.includes(' ')) {
+		var ismadura = $('input[name=mode]:checked').val() == "m2i";
+		var m = ismadura ? m2i : i2m;
+		var k = ismadura ? m2ik : i2mk;
+
+		$('#highlight').html(t.split(' ').map(x => (m[x] || ["<span style='color:gray'>"+x+"</span>"])[0]).join(' '));
+		$('#result').html('');
+
 	} else {
 		var ismadura = $('input[name=mode]:checked').val() == "m2i";
 		var m = ismadura ? m2i : i2m;
